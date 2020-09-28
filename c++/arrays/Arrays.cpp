@@ -57,14 +57,14 @@ int Arrays::shrink_to_fit()
     reserve(length);
 }
 
-bool Arrays::check_idx(int idx)
+bool Arrays::idx_valid(int idx)
 {
     return idx < 0 || idx > length;
 }
 
 int Arrays::at(int idx)
 {
-    if (check_idx(idx))
+    if (idx_valid(idx))
         return -1;
 
     return data[idx];
@@ -82,7 +82,7 @@ int Arrays::last()
 
 void Arrays::assign(int idx, int value)
 {
-    if (check_idx(idx))
+    if (idx_valid(idx))
         return;
 
     data[idx] = value;
@@ -90,7 +90,7 @@ void Arrays::assign(int idx, int value)
 
 void Arrays::push(int idx, int value)
 {
-    if (check_idx(idx))
+    if (idx_valid(idx))
         return;
 
     // check if we need to update the capacity of the array

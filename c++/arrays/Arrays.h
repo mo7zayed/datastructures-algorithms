@@ -13,7 +13,7 @@ public:
     void resize(int size);
     int max_size();
     bool is_empty();
-    bool check_idx(int idx);
+    bool idx_valid(int idx);
     int reserve(int new_capacity);
     int shrink_to_fit();
 

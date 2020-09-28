@@ -12,6 +12,7 @@ int main()
     cout << " a.max_size() is => " << a.max_size() << endl;
     cout << " a.is_empty() is => " << a.is_empty() << endl;
 
+    cout << " Pushing 1000 to a " << endl;
     for (auto i = 0; i < 1000; i++)
         a.push_end(i);
 
